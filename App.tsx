@@ -1,21 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { SafeAreaView } from "react-native";
+import { WebView } from "react-native-webview";
+import { StatusBar } from "expo-status-bar";
+import Constants from "expo-constants";
+
+const { emBaseUrl } = Constants.manifest.extra ?? {};
 
 export default function App() {
+  const {} = {};
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <StatusBar style="light" />
+      <SafeAreaView style={{ flex: 1, backgroundColor: "#000" }}>
+        <WebView
+          originWhitelist={["*"]}
+          source={{ uri: emBaseUrl }}
+          style={{ flex: 1 }}
+        />
+      </SafeAreaView>
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
