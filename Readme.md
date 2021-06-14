@@ -29,6 +29,7 @@ As you make changes to the code it automatically hot reloads within the client.
 ## Release to stores 🚀
 
 [Expo build - Read More](https://docs.expo.io/distribution/building-standalone-apps/)
+
 The package.json has helper scripts to run, publish, build and upload each variant of the application.
 
 ```shell
