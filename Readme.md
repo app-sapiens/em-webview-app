@@ -32,6 +32,8 @@ As you make changes to the code it automatically hot reloads within the client.
 
 The package.json has helper scripts to run, publish, build and upload each variant of the application.
 
+You will need to login to your Expo account before you build or upload.
+
 ```shell
 # build ios ipa
 yarn build-ios-prod
